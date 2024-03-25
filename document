@@ -1,0 +1,22 @@
+const form = document.getElementById('talkguestSearchForm');
+form.addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const checkInDate = document.getElementById('checkInDate').value;
+  const checkOutDate = document.getElementById('checkOutDate').value;
+  const numAdults = document.getElementById('numAdults').value;
+
+  // Format dates in YYYY-MM-DD format 
+  const formattedCheckIn = checkInDate.split('-').reverse().join('-');
+  const formattedCheckOut = checkOutDate.split('-').reverse().join('-');
+
+  // Construct Talkguest redirect URL
+  const redirectUrl = 'https://sundaytest.talkguestwebsites.com/en-GB/rentals/?&' +
+                      'city=aljezur&' +
+                      'adults=' + numAdults + 
+                      '&checkinDate=' + formattedCheckIn +
+                      '&checkoutDate=' + formattedCheckOut;
+
+  // Redirect to Talkguest
+  window.location.href = redirectUrl; 
+});
