@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Talkguest Search</title>
+</head>
+<body>
+    <form id="talkguestSearchForm">
+        </form>
+
+    <script>
+        const form = document.getElementById('talkguestSearchForm');
+        // ... (JavaScript code from previous example) ...
+    </script>
+</body>
+</html>
